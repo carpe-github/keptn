@@ -48,7 +48,7 @@ spec:
             - -c
             - >-
               mongodump --uri mongodb://user:$(MONGODB_PASSWORD)@mongodb:27017/keptn --out ./dump &&
-              mongorestore --uri mongodb://user:$(MONGODB_PASSWORD)@mongo:27017/keptn?replicaSet=keptn-replicaset --authenticationDatabase keptn --db keptn ./dump/keptn
+              mongorestore --uri mongodb://user:$(MONGODB_PASSWORD)@mongo:27017/keptn --authenticationDatabase keptn --db keptn ./dump/keptn
           volumeMounts:
             - mountPath: dump
               name: mongo-dumps

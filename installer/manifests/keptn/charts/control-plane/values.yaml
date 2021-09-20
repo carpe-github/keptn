@@ -1,6 +1,6 @@
 mongodb:
   enabled: true
-  host: mongo:27017
+  host: mongo-svc:27017
   user:
   password:
   adminPassword:

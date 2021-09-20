@@ -1,0 +1,12 @@
+image:
+  registry: docker.io
+  repository: mongo
+  tag: 4.2.16
+
+operator:
+  registry: quay.io
+
+# storage and storageClass are the settings for the used PVC
+storage: 5Gi
+replicas: 3
+storageClass:

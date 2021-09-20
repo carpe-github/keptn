@@ -33,9 +33,8 @@ func GetMongoDBConnectionString() string {
 	databaseName := os.Getenv("MONGO_DB_NAME")
 	mongoDBUser := os.Getenv("MONGODB_USER")
 	mongoDBPassword := os.Getenv("MONGODB_PASSWORD")
-	mongoDBReplicaSet := os.Getenv("MONGODB_REPLICASET")
 
-	return fmt.Sprintf("mongodb://%s:%s@%s/%s?replicaSet=%s", mongoDBUser, mongoDBPassword, mongoDBHost, databaseName, mongoDBReplicaSet)
+	return fmt.Sprintf("mongodb://%s:%s@%s/%s", mongoDBUser, mongoDBPassword, mongoDBHost, databaseName)
 }
 
 func getDatabaseName() string {
